@@ -1,15 +1,15 @@
 body {
-  color: #40514E
+  color: #393E46;
   margin: 0;
   text-align: center;
-  background-color: #BFFFF0;
+  background-color: #EEEEEE;
   padding-top: 50px;
-  font-family: cursive, sans-serif;
+  font-family: "europa", sans-serif;
 }
 
 h1 {
-  color: #BB6464;
-  font-family: 'Sacramento', cursive;
+  color: #141c3a;
+  font-family:  "eurostile", sans-serif;
   font-size: 5.625rem;
   margin: 150px auto 0 auto;
   font-weight: bold;
@@ -18,19 +18,28 @@ h1 {
 h2 {
   font-size: 1.5rem;
   margin: 0px;
-  color: #219F94;
+  color: ;
   font-weight: bold;
-  font-family: cursive, sans-serif;
+  font-family: "eurostile", sans-serif;
   padding-bottom: 10px;
 }
+
+th {
+    padding: 0 15px;
+}
+
+td {
+    padding: 0 15px;
+  }
+
 
 p {
   line-height: 200%;
 }
 
 h3 {
-  font-family: cursive, sans-serif;
-  color: #219F94;
+  font-family: "europa", sans-serif;
+  color: #4ECCA3;
   font-weight: bold;
 }
 
@@ -42,8 +51,8 @@ hr {
 }
 
 a {
-  color: #BFFFF0;
-  font-family: cursive, sans-serif;
+  color: #393E46;
+  font-family: "europa", sans-serif;
   margin: 20px 10px;
   text-decoration: none;
   }
@@ -51,6 +60,10 @@ a {
 a:hover {
     color: #EAF6F6
   }
+
+.intro_title {
+    color: #4ECCA3
+}
 
 .copyright {
   color: #EAF6F6;
@@ -64,7 +77,6 @@ a:hover {
 }
 
 .top-container {
-  background-color: #BFFFF0;
   text-align: center;
 }
 
@@ -73,8 +85,8 @@ a:hover {
 }
 
 .bottom-container {
-  height: 100px;
-  background-color: #219F94;
+  height: 120px;
+  background-color: #4ECCA3;
   padding: 50px 0px 20px;
 }
 
@@ -86,16 +98,24 @@ a:hover {
   position: relative;
 }
 
-.cloud1 {
+
+
+.binary1 {
   position: absolute;
   right: 600px;
-  top: 40px;
+  top: 62px;
+  height:50px;
 }
 
-.cloud2 {
+.binary2 {
   position: absolute;
   left: 250px;
   bottom: 520px;
+  height:50px;
+}
+
+.gradient-code {
+    padding-top: 15px
 }
 
 .cactus1 {
@@ -113,14 +133,18 @@ a:hover {
     height: 150px;
 }
 
-.cute-cactus {
+.finance-image {
   width: 15%;
   float: left;
   margin-right: 30px;
-
 }
 
-.chillies {
+
+.code-icon {
+    height: 50px
+}
+
+.coding-image2 {
   width: 15%;
   float: right;
   margin-left: 30px;
@@ -143,7 +167,7 @@ a:hover {
 }
 
 .btn {
-  background: #11cdd4;
+  background: #4ECCA3;
   background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
   background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
   background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
@@ -152,7 +176,7 @@ a:hover {
   -webkit-border-radius: 8;
   -moz-border-radius: 8;
   border-radius: 8px;
-  font-family: cursive, sans-serif;
+  font-family: "europa", sans-serif;
   color: #ffffff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
