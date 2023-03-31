@@ -1,4 +1,3 @@
-
 <!-- Page Header -->
 <header>
     <div class="overlay"></div>
@@ -6,47 +5,50 @@
     <link href="static/css/styles.css" rel="stylesheet">
     <link href="https://github.com/Pwnafication/Web-Development/blob/10253123f53660798b38956d38dfe9bb5d917a44/StarterProjects/CactusBeach%20Website/real_cactus.png?raw=true"
           rel="icon">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Montserrat&family=Sacramento&display=swap"
           rel="stylesheet">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-        <img class="code-icon" src="static/img/code.png" </img>
-        <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse"
-                type="button">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('get_all_posts') }}">Home</a>
-                </li>
-                {% if not logged_in: %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('login') }}">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('register') }}">Register</a>
-                </li>
-                {% endif %}
-                {% if logged_in: %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
-                </li>
-                {% endif %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('about') }}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
-                </li>
-            </ul>
+        <div class="container">
+            <img class="code-icon" src="static/img/code.png" </img>
+            <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse"
+                    type="button">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('get_all_posts') }}">Home</a>
+                    </li>
+                    {% if not logged_in: %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                    </li>
+                    {% endif %}
+                    {% if logged_in: %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 </header>
 
@@ -73,7 +75,9 @@
              src="https://github.com/Pwnafication/Web-Development/blob/main/StarterProjects/CactusBeach%20Website/Me%20Photo.png?raw=true">
         <p></p>
         <h2>Hello.</h2>
-        <p class="intro">I am also a Solution Architect, Certified Public Accountant, and Robotic Process Automation Developer. I've worked on contracts for many government entities as well as for large commercial companies such as Biogen and Meta (Facebook).</p>
+        <p class="intro">I am also a Solution Architect, Certified Public Accountant, and Robotic Process Automation
+            Developer. I've worked on contracts for many government entities as well as for large commercial companies
+            such as Biogen and Meta (Facebook).</p>
     </div>
     <hr>
     <div class="skills">
@@ -102,40 +106,33 @@
     <div class="contact-me">
         <h3>Work Experience</h3>
         <p></p>
-  <table cellspacing="10", align="center">
-    <thead>
-      <tr>
-        <th><strong>Years</strong></th>
-        <th><strong>Work</strong></th>
-      </tr>
-    </thead>
-    <tr>
-      <td>2020-Present</td>
-      <td>Senior Developer @ Deloitte</td>
-    <tr>
-      <td>2019-2020</td>
-      <td>Cybersecurity Consultant @ Guidehouse</td>
-    <tr>
-      <td>2019-2019</td>
-      <td>IT Audit Controls Lead @ RM Advisory Services, LLP</td>
-    <tr>
-      <td>2018-2019</td>
-      <td>Bank Examiner @ The FDIC</td>
-    </tr>
-</table>
+        <table , align="center" cellspacing="10">
+            <thead>
+            <tr>
+                <th><strong>Years</strong></th>
+                <th><strong>Work</strong></th>
+            </tr>
+            </thead>
+            <tr>
+                <td>2020-Present</td>
+                <td>Senior Developer @ Deloitte</td>
+            <tr>
+                <td>2019-2020</td>
+                <td>Cybersecurity Consultant @ Guidehouse</td>
+            <tr>
+                <td>2019-2019</td>
+                <td>IT Audit Controls Lead @ RM Advisory Services, LLP</td>
+            <tr>
+                <td>2018-2019</td>
+                <td>Bank Examiner @ The FDIC</td>
+            </tr>
+        </table>
         <hr>
-        <a class="btn" href="mailto:mourdris@gmail.com">CONTACT ME</a>
+
     </div>
 </div>
-<div class="bottom-container">
-    <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
-    <a class="footer-link" href="https://twitter.com/">Twitter</a>
-    <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
-    <p></p>
-</div>
+
 
 </body>
-
-<hr>
 
 {% include "footer.html" %}
