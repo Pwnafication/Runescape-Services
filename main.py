@@ -118,6 +118,9 @@ def register():
         return redirect(url_for("get_all_posts"))
     return render_template("register.html", form=form, logged_in=current_user.is_authenticated)
 
+@app.route('/game_demo', methods=["GET", "POST"])
+def game_index():
+    return render_template("game_demo.html")
 
 @app.route('/login', methods=["GET", "POST"])
 def login():

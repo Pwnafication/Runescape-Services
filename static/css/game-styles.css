@@ -1,0 +1,15 @@
+th {
+    padding: 0 15px;
+}
+
+td {
+    align:"center"
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:5px;
+    padding-left:5px;
+  }
+
+.upgrade_btn {
+    width:300px
+}
