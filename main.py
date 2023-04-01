@@ -12,6 +12,7 @@ from flask_wtf import FlaskForm
 from functools import wraps
 from flask_ckeditor import CKEditor, CKEditorField
 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 ckeditor = CKEditor(app)
@@ -24,6 +25,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+
 #LoginHandling
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -31,9 +33,9 @@ login_manager.init_app(app)
 def load_user(user_id):
     return UserTable.query.get(int(user_id))
 
+
 ##CONFIGURE TABLES
 from tables import *
-
 
 
 ##WTForm
