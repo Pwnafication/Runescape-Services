@@ -1,3 +1,8 @@
+body {
+    background:#675D50;
+    font-family: 'King Castle'
+}
+
 th {
     padding: 0 15px;
 }
@@ -26,10 +31,10 @@ td {
   color: white;
 }
 
-
-
-
-
+@font-face {
+    font-family: 'King Castle';
+    src: url("/static/vendor/fontawesome-free/webfonts/King Castle Free Version.otf") format("opentype");
+}
 
 
 .nav {
