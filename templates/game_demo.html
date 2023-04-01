@@ -1,45 +1,50 @@
-<head>
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+{% include "header.html" %}
+<link href="static/css/game-styles.css" rel="stylesheet">
 
-	<!-- include rpgui -->
-	<link href="static/css/rpgui.min.css" rel="stylesheet" type="text/css" >
-	<script src="static/js/rpgui.min.js"></script>
-    <link href="static/css/game-styles.css" rel="stylesheet">
+<style>
+body {
+    background:#675D50;
+    font-family: 'King Castle'
+}
 
-</head>
+</style>
+
+<!-- Page Header -->
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container" style="
+        border-radius:10px;
+        height:100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('static/css/images/base bg.png')">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+                <h1 ; style="padding-top: 200px; font-family: 'King Castle'">Build your own Future!</h1>
+                <span class="subheading" style="font-family: 'King Castle'">Accumulate wealth, buy upgrades, and explore the universe!</span>
+            </div>
 
 
+            <div class="container" style="padding: 50px; padding-bottom: 600px; color:white">
+                <div class="row">
 
-<body>
 
-	<div class="rpgui-content">
-
-        <div class="rpgui-container framed rpgui-draggable" style="text-align:left; height:130px; width:90%; top: 300px; left: 50px;">
-            <p>RPGUI buttons
-                <button class="rpgui-button" type="button" style="width:200px"><p>New Game</p></button>
-				<button class="rpgui-button" type="button" style="width:200px"><p>Exit</p></button>
-            </p>
-
+                </div>
+            </div>
         </div>
 
-	</div>
+    </div>
+    </div>
+</header>
+
+<body style="background-color: #2D2727">
+
+{% include "footer.html" %}
 </body>
 
-<div class="nav">
-  <input type="checkbox" id="nav-check">
-  <div class="nav-header">
-    <div class="nav-title">
-      TGIF117
-    </div>
-  </div>
-  <div class="nav-btn">
-    <label for="nav-check">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-  </div>
+{% endblock %}
 
-  <div class="nav-links">
-    <a href="#1">Create New Account/Login</a>
-  </div>
-</div>

@@ -13,7 +13,7 @@
     <!-- Bootstrap core CSS -->
 
     <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-
+    <link href="static/css/game-styles.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
     <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet"
           type="text/css">
@@ -32,7 +32,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="{{url_for('get_all_posts')}}">Alex's Games</a>
+        <a class="navbar-brand" href="{{url_for('get_all_posts')}}" style="font-family: 'King Castle'">TGIF117 Games</a>
         <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" data-toggle="collapse"
                 type="button">
@@ -42,29 +42,29 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('get_all_posts') }}">Home</a>
+                    <a class="nav-link" href="{{ url_for('get_all_posts') }}" style="font-family: 'King Castle'">Home</a>
                 </li>
                 {% if not logged_in: %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    <a class="nav-link" href="{{ url_for('login') }}" style="font-family: 'King Castle'">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                    <a class="nav-link" href="{{ url_for('register') }}" style="font-family: 'King Castle'">Register</a>
                 </li>
                 {% endif %}
                 {% if logged_in: %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+                    <a class="nav-link" href="{{ url_for('logout') }}" style="font-family: 'King Castle'">Log Out</a>
                 </li>
                 {% endif %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    <a class="nav-link" href="{{ url_for('contact') }}" style="font-family: 'King Castle'">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    <a class="nav-link" href="{{ url_for('game_index') }}" style="font-family: 'King Castle'">Game Demo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('game_index') }}">Game Demo</a>
+                    <a class="nav-link" href="{{ url_for('about') }}" style="font-family: 'King Castle'">About Alex</a>
                 </li>
             </ul>
         </div>

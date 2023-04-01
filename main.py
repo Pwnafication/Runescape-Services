@@ -102,9 +102,10 @@ def login():
             return redirect(url_for('login'))
         else:
             login_user(user)
-            return redirect(url_for('get_all_posts'))
+            return redirect(url_for('game_index'))
 
     return render_template("login.html", form=form, logged_in=current_user.is_authenticated)
+
 
 #Create admin-only decorator
 def admin_only(f):

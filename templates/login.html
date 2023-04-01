@@ -1,19 +1,28 @@
 {% extends 'bootstrap/base.html' %}
 {% import "bootstrap/wtf.html" as wtf %}
-
 {% block content %}
-{% include "login_header.html" %}
+{% include "header.html" %}
 <link href="static/css/game-styles.css" rel="stylesheet">
 
+<style>
+body {
+    background:#675D50;
+    font-family: 'King Castle'
+}
+</style>
+
 <!-- Page Header -->
-<header class="masthead"
-        style="background-image: url('static/css/images/portal photo for login.png.png')">
+<header class="masthead">
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container" style="border-radius:10px;
+height:100%;
+background-repeat: no-repeat;
+background-size: cover;background-image: url('static/css/images/portal photo for login.png.png')"
+">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="page-heading">
-                    <h1 style="font-family: 'King Castle'">Enter the Portal</h1>
+                    <h1 style="padding-top: 200px; font-family: 'King Castle'"; >Enter the Portal</h1>
                     <span class="subheading" style="font-family: 'King Castle'">Welcome Back, Adventurer!</span>
                 </div>
                 {% with messages = get_flashed_messages() %}
@@ -24,11 +33,11 @@
                 {% endif %}
                 {% endwith %}
 
-                <div class="container" style="padding: 50px; padding-bottom: 100px; color:white">
+                <div class="container" style="padding: 50px; padding-bottom: 600px; color:white">
                     <div class="row">
 
                         <div class="col-lg-8 col-md-10 mx-auto content">
-                            {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                            {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "outline-warning"}) }}
                         </div>
                     </div>
                 </div>
@@ -40,6 +49,8 @@
 
 <body style="background-color: #2D2727">
 
+{% include "footer.html" %}
 </body>
 
 {% endblock %}
+
