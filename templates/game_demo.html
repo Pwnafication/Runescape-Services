@@ -1,41 +1,49 @@
-{% include "game_demo_header.html" %}
+<head>
 
-  <!-- Main Content -->
+	<!-- include rpgui -->
+	<link href="static/css/rpgui.min.css" rel="stylesheet" type="text/css" >
+	<script src="static/js/rpgui.min.js"></script>
+    <link href="static/css/game-styles.css" rel="stylesheet">
 
-<table align="center">
-    <tr>
-        <td>
-            <button class="upgrade_btn" type="button" >Upgrade Health</button>
-        </td>
-        <td>
-            <button class="upgrade_btn" type="button" >Upgrade Energy</button>
-        </td>
-        <td>
-            <button class="upgrade_btn" type="button" >Upgrade Attack</button>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <button class="upgrade_btn" type="button" >Upgrade Defense</button>
-        </td>
-        <td>
-            <button class="upgrade_btn" type="button" >Contract +10 Military Units</button>
-        </td>
-        <td>
-            <button class="upgrade_btn" type="button" >Scavenge for +10 Raw Meats</button>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <button class="upgrade_btn" type="button" >Smith +10 Iron Ingots</button>
-        </td>
-        <td>
-            <button class="upgrade_btn" type="button" >Craft +10 Muskets</button>
-        </td>
-        <td>
-            <button class="upgrade_btn" type="button" >Expedition for +10 Quarium</button>
-        </td>
-    </tr>
-</table>
+</head>
 
-{% include "footer.html" %}
+
+
+<body>
+
+	<div class="rpgui-content">
+
+        <div class="rpgui-container framed rpgui-draggable" style="text-align:left; height:130px; width:90%; top: 300px; left: 50px;">
+            <p>RPGUI buttons
+                <button class="rpgui-button" type="button" style="width:200px"><p>New Game</p></button>
+				<button class="rpgui-button" type="button" style="width:200px"><p>Exit</p></button>
+            </p>
+
+        </div>
+
+	</div>
+</body>
+
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      Codeconvey
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+  <div class="nav-links">
+    <a href="#1">HTML</a>
+    <a href="#2">CSS</a>
+    <a href="#3">JavaScript</a>
+    <a href="#4">jQuery</a>
+    <a href="#5">PHP</a>
+  </div>
+</div>

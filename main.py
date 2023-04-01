@@ -5,7 +5,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
-from forms import CreatePostForm
 from flask_gravatar import Gravatar
 from wtforms import StringField, SubmitField, PasswordField
 from wtforms.validators import DataRequired, URL
@@ -33,53 +32,12 @@ def load_user(user_id):
     return UserTable.query.get(int(user_id))
 
 ##CONFIGURE TABLES
+from tables import *
 
-class BlogPost(db.Model):
-    __tablename__ = "blog_posts"
-    id = db.Column(db.Integer, primary_key=True)
-    author = relationship("UserTable", back_populates="posts")
-    author_id = db.Column(db.Integer, db.ForeignKey("User_Table.id"))
-    title = db.Column(db.String(250), unique=True, nullable=False)
-    subtitle = db.Column(db.String(250), nullable=False)
-    date = db.Column(db.String(250), nullable=False)
-    body = db.Column(db.Text, nullable=False)
-    img_url = db.Column(db.String(250), nullable=False)
-    comments = relationship("Comment", back_populates="blog_post")
-
-class UserTable(UserMixin, db.Model):
-    __tablename__ = "User_Table"
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(100), unique=True)
-    password = db.Column(db.String(100))
-    name = db.Column(db.String(1000))
-    posts = relationship("BlogPost", back_populates="author")
-    comments = relationship("Comment", back_populates="comment_author")
-
-class Comment(db.Model):
-    __tablename__ = "comments"
-    id = db.Column(db.Integer, primary_key=True)
-    comment = db.Column(db.String(750), nullable=False)
-    author_id = db.Column(db.Integer, db.ForeignKey("User_Table.id"))
-    comment_author = relationship("UserTable", back_populates="comments")
-    blogpost_id = db.Column(db.Integer, db.ForeignKey("blog_posts.id"))
-    blog_post = relationship("BlogPost", back_populates="comments")
 
 
 ##WTForm
-class RegisterUser(FlaskForm):
-    email = StringField("Your Email", validators=[DataRequired()])
-    password = PasswordField("Your Password", validators=[DataRequired()])
-    name = StringField("Your Name", validators=[DataRequired()])
-    submit = SubmitField("Submit")
-
-class LoginUser(FlaskForm):
-    email = StringField("Your Email", validators=[DataRequired()])
-    password = PasswordField("Your Password", validators=[DataRequired()])
-    submit = SubmitField("Login")
-
-class CommentPostForm(FlaskForm):
-    body = CKEditorField("Comment", validators=[DataRequired()])
-    submit = SubmitField("Submit Comment")
+from forms import *
 
 
 with app.app_context():
@@ -90,7 +48,6 @@ with app.app_context():
 def get_all_posts():
     posts = BlogPost.query.all()
     return render_template("index.html", all_posts=posts, logged_in=current_user.is_authenticated, user=current_user)
-
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
@@ -120,7 +77,11 @@ def register():
 
 @app.route('/game_demo', methods=["GET", "POST"])
 def game_index():
-    return render_template("game_demo.html")
+    return render_template("game_demo.html", logged_in=current_user.is_authenticated, user=current_user)
+
+@app.route('/demo')
+def demo():
+    return render_template("demo.html", logged_in=current_user.is_authenticated, user=current_user)
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
