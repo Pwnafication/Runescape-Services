@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loot Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery for AJAX -->
+</head>
+<body>
+    <h1>Loot Page</h1>
+    <p>Every time you click the button, the counter will increment if you have enough energy.</p>
+
+    <!-- Display the current energy -->
+    <h2>Current Energy: <span id="energy">{{ energy }}</span></h2>
+
+    <!-- Display the total Gold accumulated -->
+    <h2>Total Gold Accumulated: <span id="gold">{{ gold }}</span></h2>
+
+    <!-- Button to increment clicks and earn gold -->
+    <button id="loot-button">Click to Loot and Earn Gold</button>
+    <p id="error-message" style="color: red; display: none;">Not enough energy!</p>
+
+    <!-- Navigation buttons -->
+    <br><br>
+    <a href="{{ url_for('homebase') }}"><button>Go to Homebase</button></a>
+    <a href="{{ url_for('index') }}"><button>Back to Main Page</button></a>
+
+    <!-- jQuery script to handle the button click and AJAX call -->
+    <script>
+        $(document).ready(function() {
+            $('#loot-button').click(function() {
+                // Make an AJAX POST request to increment the click count and earn gold
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/increment_clicks',
+                    success: function(response) {
+                        // Update the energy and gold count on the page
+                        $('#energy').text(response.energy);
+                        $('#gold').text(response.gold);
+                        $('#error-message').hide();
+                    },
+                    error: function() {
+                        // Display error if no energy is left
+                        $('#error-message').show();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

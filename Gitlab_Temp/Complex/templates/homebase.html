@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homebase Page</title>
+</head>
+<body>
+    <h1>Homebase</h1>
+    <p>Your current energy is: <strong>{{ energy }}</strong></p>
+    <p>Your total accumulated Gold is: <strong>{{ gold }}</strong></p>
+    <h2>Last 10 actions timestamps (Unix time):</h2>
+    <ul>
+        {% for timestamp in timestamps %}
+            <li>{{ timestamp }}</li>
+        {%

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loot Page</title>
+</head>
+<body>
+    <h1>Loot Page</h1>
+    <p>Every time you click the button, the counter will increment.</p>
+    <h2>Total Clicks: {{ count }}</h2>
+    <a href="{{ url_for('loot') }}"><button>Click to Loot</button></a>
+    <br><br>
+    <a href="{{ url_for('homebase') }}"><button>Go to Homebase</button></a>
+    <a href="{{ url_for('index') }}"><button>Back to Main Page</button></a>
+</body>
+</html>
