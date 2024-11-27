@@ -20,11 +20,16 @@ def get_box_id(row, col):
     row_index = (row // 3) * 3
     return col_index + row_index
 
-def sudoku_recursion(box, rows, cols, num):
+def sudoku_recursion(box, rows, cols, num, row, col):
+    if row == len(board) or col == len(board[0]):
+        return True
+    else: ""
+
+
 
 def construct_and_solve(board):
     n = len(board)
-    box =  [{} for each in range(n)]
+    boxes =  [{} for each in range(n)]
     rows = [{} for each in range(n)]
     cols = [{} for each in range(n)]
 
@@ -33,8 +38,8 @@ def construct_and_solve(board):
             value = board[row][col]
             if value != '.':
                 box_index = get_box_id(row,col)
-                box[box_index][value] = True
+                boxes[box_index][value] = True
                 rows[row][value] = True
                 cols[col][value] = True
-    sudoku_recursion()
+    sudoku_recursion(board, boxes, rows, cols, 0, 0)
     
