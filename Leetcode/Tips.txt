@@ -1,0 +1,9 @@
+reverse linked list --> store reverse advance
+DFS traversals 
+    - pre order  // node, left, right 
+    - in order   // left, node, right
+    - post order // left, right, node 
+
+ merging lists into new list 
+    - while head, assign currentNode.next = head1
+    - then incremenet head1 = head1.next
