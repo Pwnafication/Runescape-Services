@@ -20,7 +20,7 @@ class Solution(object):
                 StackBox.append(each)
             else:
                 # Check if there's a corresponding opening bracket
-                if not StackBox:
+                if not StackBox: #checks if the stackbox is empty, so if we have a closing parenthesis coming in but our stack is empty, well, that's gonna mean it's all invalid.
                     return False
                 LeftBracket = StackBox.pop()
                 RightBracket = dct_Parenthesis[LeftBracket]

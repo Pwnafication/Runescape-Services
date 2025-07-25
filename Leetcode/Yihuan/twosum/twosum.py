@@ -9,4 +9,3 @@ def findtwosum(theArray, theTarget):
     return None
 
 print(findtwosum(arr1,target))
-

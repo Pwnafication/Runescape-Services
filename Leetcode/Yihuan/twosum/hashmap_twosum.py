@@ -1,14 +1,15 @@
 arr1 = [1, 3, 5, 8, 9]
 target = 12
 
-def findtwosum(theArray, theTarget):
-    seen = {}  # Initialize an empty dictionary to store numbers and their indices
-    for number in theArray:
-        complement = theTarget - number  # Calculate the number needed to reach the target
+def findtwosum(nums, target):
+    seen = {}  # Stores num: index
+    for i, num in enumerate(nums):
+        complement = target - num
         if complement in seen:
-            return (complement, number)  # Return the pair if the complement is already in seen
-        seen[number] = True  # Add the current number to the hash map as seen
-    return None
+            return [seen[complement], i]
+        seen[num] = i
+    return None  # If no solution is found
+
 
 
 print(findtwosum(arr1, target))
