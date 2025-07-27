@@ -1,0 +1,23 @@
+rainArray = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+
+class Solution(object):
+    def trap(self, theArray):
+        WaterCollected = 0
+        p1, p2 = 0, len(theArray) - 1
+        LeftWall, RightWall = theArray[p1], theArray[p2]
+        
+        while p1 < p2:
+            if LeftWall < RightWall:
+                p1 += 1
+                LeftWall = max(LeftWall, theArray[p1])
+                WaterCollected += max(0, LeftWall - theArray[p1])
+            else:
+                p2 -= 1
+                RightWall = max(RightWall, theArray[p2])
+                WaterCollected += max(0, RightWall - theArray[p2])
+
+        return WaterCollected
+
+# Example usage
+solution = Solution()
+print(solution.trap(rainArray))  # Expected output: 6
