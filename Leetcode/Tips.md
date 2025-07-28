@@ -25,8 +25,13 @@
       - String processing (e.g. Valid Parentheses, Decode String)
 
 # Done: 
-      - Two Sum 
-      - Container with Most Water
-      - Valid Parentheses 
-      - Contains Duplicate
-      - 
+      1. Two Sum 
+      2. Container with Most Water
+      3. Valid Parentheses 
+      4. Contains Duplicate
+      5. Isomorphic Strings 
+      6. Valid Anagram
+      7. Group Anagrams 
+      8. Intersection of Two Arrays 
+      9. MajorityElement
+      10. 
