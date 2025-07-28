@@ -34,4 +34,11 @@
       7. Group Anagrams 
       8. Intersection of Two Arrays 
       9. MajorityElement
-      10. 
+      
+      10. LongestSubstring 
+      11. FindAllAnagrams
+      12. Permutation in String
+
+# check values versus indexes 
+# check initializing variables 
+# check consistent use of variable scopes 
