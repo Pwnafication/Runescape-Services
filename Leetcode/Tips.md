@@ -129,3 +129,41 @@ Focused, high-yield problem set targeting the most common CodeSignal OA question
 - Aligned with Capital One OA (sliding window, matrix, intervals)  
 - Designed for 90–120 min daily sessions  
 - Builds pattern fluency for Q1–Q4 style questions
+
+
+### 🧩 LeetCode Problem Tiers (Capital One OA Focus)
+
+#### 🏆 S Tier – Must Master  
+High chance of appearing. Fast solves. Core patterns for Q1/Q2/Q4.
+
+- Two Sum  
+- Valid Anagram  
+- Longest Substring Without Repeating Characters  
+- Find All Anagrams in a String  
+- Permutation in String  
+
+#### 🅰️ A Tier – High Value  
+Strong chance of appearing. Requires slightly more logic. High ROI.
+
+- Subarray Sum Equals K  
+- Minimum Window Substring  
+- Top K Frequent Elements  
+- Merge Intervals  
+
+#### 🅱️ B Tier – Solid Drills  
+Medium importance. Reinforces patterns. Shows up occasionally.
+
+- Group Anagrams  
+- Task Scheduler  
+- House Robber  
+
+#### 🅲 C Tier – Quick Review  
+Low likelihood. Easy points if they appear.
+
+- Isomorphic Strings  
+- Contains Duplicate  
+
+#### 🅳 D Tier – Rare Use  
+Niche value. Review only if time permits or you’re sweeping all patterns.
+
+- Majority Element  
